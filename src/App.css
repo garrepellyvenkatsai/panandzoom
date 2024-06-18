@@ -1,0 +1,228 @@
+/* src/App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #3f51b5;
+  color: white;
+}
+
+.header .controls {
+  display: flex;
+  align-items: center;
+}
+
+.header .controls button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.header .controls button:hover {
+  background-color: #388e3c;
+}
+
+.header .mermaid-controls {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.header .mermaid-controls label {
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.header .mermaid-controls input {
+  margin-left: 5px;
+}
+
+.header .mermaid-controls .fullscreen,
+.header .controls .export {
+  background-color: #f50057;
+  color: white;
+  margin-left: 10px;
+}
+
+.header .mermaid-controls .fullscreen:hover,
+.header .controls .export:hover {
+  background-color: #c51162;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+}
+
+.left, .right {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.left {
+  border-right: 1px solid #ddd;
+}
+
+textarea {
+  width: 100%;
+  height: calc(100% - 40px);
+  box-sizing: border-box;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.diagramContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+.innerDiagramContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerDiagramContainer svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+button.export {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button.export:hover {
+  background-color: #388e3c;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+}
+.diagramContainer .djs-powered-by {
+  display: none !important;
+}
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
+  position: relative; /* Ensure the container has a position */
+}
+
+.diagramContainer {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 16px;
+  position: relative; /* Position the diagram container */
+}
+
+.innerDiagramContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
